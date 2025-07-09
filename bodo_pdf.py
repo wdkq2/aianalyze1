@@ -71,7 +71,8 @@ def main(config_path):
     os.makedirs(drive_dir, exist_ok=True)
     os.environ["HF_HOME"] = hf_home
 
-    model_name = "upskyy/e5-large-korean" if torch.cuda.is_available() else "BM-K/KoSimCSE-roberta-base"
+    model_name = "upskyy/e5-large-korean" if torch.cuda.is_available() else "snunlp/KR-SBERT-V40K-klueNLI-augSTS"
+
     model = SentenceTransformer(model_name)
 
     conn = sqlite3.connect("docs.db")
