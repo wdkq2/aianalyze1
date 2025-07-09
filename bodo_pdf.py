@@ -72,6 +72,7 @@ def main(config_path):
     os.environ["HF_HOME"] = hf_home
 
     model_name = "upskyy/e5-large-korean" if torch.cuda.is_available() else "snunlp/KR-SBERT-V40K-klueNLI-augSTS"
+
     model = SentenceTransformer(model_name)
 
     conn = sqlite3.connect("docs.db")
