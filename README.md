@@ -1,9 +1,9 @@
 # aianalyze1
-
 이 저장소는 국토교통부 보도자료 PDF를 수집해 텍스트와 임베딩을 생성하는 Google Colab 노트북과 동일한 파이썬 스크립트를 제공합니다.
 
 ## 빠른 시작
 `bodo_pdf_colab.ipynb` 파일을 Google Colab에서 열어 실행할 수 있습니다. 노트북은 Google Drive에 위치한 JSON 설정 파일을 사용합니다. 예시는 다음과 같습니다.
+
 
 ```json
 {
@@ -43,4 +43,3 @@ python bodo_pdf.py --config /path/to/env.json
 ```
 
 `env.json` 형식은 위와 동일하며 실행 후 결과 파일이 `DRIVE_DIR`에 저장됩니다.
-
