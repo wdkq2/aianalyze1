@@ -67,8 +67,9 @@ def main(config_path):
     end_date = cfg.get("END_DATE", "2025-07-08")
     page_size = int(cfg.get("PAGE_SIZE", 1000))
     drive_dir = cfg.get("DRIVE_DIR", "/content/drive/MyDrive/boan_data")
-    hf_home = cfg.get("HF_HOME_DIR", "/content/drive/.hf_cache")
+    hf_home = cfg.get("HF_HOME_DIR", "/content/hf_cache")
     os.makedirs(drive_dir, exist_ok=True)
+    os.makedirs(hf_home, exist_ok=True)
     os.environ["HF_HOME"] = hf_home
 
     model_name = "upskyy/e5-large-korean" if torch.cuda.is_available() else "snunlp/KR-SBERT-V40K-klueNLI-augSTS"

@@ -12,11 +12,16 @@
   "END_DATE": "2025-07-08",
   "PAGE_SIZE": 1000,
   "DRIVE_DIR": "/content/drive/MyDrive/boan_data",
-  "HF_HOME_DIR": "/content/drive/.hf_cache"
+  "HF_HOME_DIR": "/content/hf_cache"
 }
 ```
 
 첫 번째 셀의 `CONFIG_PATH` 변수에 이 파일의 경로를 지정하면 나머지 값이 자동으로 불러와집니다.
+
+`HF_HOME_DIR`는 허깅페이스 모델 캐시 디렉터리입니다. 이 경로를 Google Drive에
+설정하면 캐시 생성 과정에서 "Operation not supported" 오류가 발생할 수 있으므로
+기본값으로 로컬 경로인 `/content/hf_cache`를 사용합니다. 캐시를 유지하고 싶다면
+작업 후 해당 폴더를 수동으로 Drive에 복사해 둘 수 있습니다.
 
 ## 자세한 사용 방법 (처음부터 끝까지)
 
