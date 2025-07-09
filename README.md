@@ -20,3 +20,14 @@ paths. Example `env.json`:
 
 Set `CONFIG_PATH` in the first cell of the notebook to the location of this file
 and the rest of the variables will load automatically.
+
+## Command-line script
+For environments outside of Colab you can run the workflow using `bodo_pdf.py`:
+
+```bash
+python bodo_pdf.py --config /path/to/env.json
+```
+
+The JSON file uses the same keys shown above. The script downloads PDFs,
+embeds paragraphs and stores `docs.db` and `faiss_index.faiss` in the
+`DRIVE_DIR` folder.
